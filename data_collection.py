@@ -3,6 +3,7 @@ import numpy as np
 import pandas as pd
 import datetime
 import requests
+import io
 
 url = 'https://archives.nseindia.com/content/equities/EQUITY_L.csv'
 s = requests.get(url).content
