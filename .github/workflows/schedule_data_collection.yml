@@ -21,9 +21,6 @@ jobs:
         
       - name: Install required modules
         run: pip install -r requirements.txt
-        
-      - name: Install required packages
-        run: pip install io
 
       - name: Run data collection script
         run: python data_collection.py
