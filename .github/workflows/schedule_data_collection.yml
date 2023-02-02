@@ -28,6 +28,12 @@ jobs:
       - name: Run data collection script
         run: python data_collection.py
         
+      - name: Adding user identity (email)
+        run: git config --global user.email "saurabhdeosarkar100@gmail.com"
+        
+      - name: Adding user identity (username)
+        run: git config --global user.name "Saura1996"
+        
       - name: Add file to git
         run: git add s_data5.json
       
