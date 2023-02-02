@@ -36,9 +36,3 @@ jobs:
     - name: Commit changes
       run: |
         git commit -m "Automated data collection"
-        
-    - name: Push changes
-      uses: ad-m/github-push-action@v0.9.0
-      with:
-        github_token: ${{ secrets.SECRET_TOKEN }}
-        branch: main
