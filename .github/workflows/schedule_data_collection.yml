@@ -1,8 +1,7 @@
 name: Schedule data collection
 
 on:
-  schedule:
-    - cron: "5 22 * * *"
+  workflow_dispatch
 
 jobs:
   run-data-collection:
