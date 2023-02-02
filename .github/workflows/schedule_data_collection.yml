@@ -6,10 +6,8 @@ on:
   pull_request:
     branches: [ "main" ]
 
-permissions:
-  pull-requests: write
-  issues: write
-  repository-projects: write
+permissions: write-all
+
 
 env:
   GITHUB_TOKEN: ${{ secrets.SECRET_TOKEN }}
