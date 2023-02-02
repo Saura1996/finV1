@@ -15,7 +15,11 @@ jobs:
         run: python data_collection.py
 
       - name: Commit and push changes
-        uses: git-auto-commit-action/git-auto-commit@v2
+        uses: actions/github-script@v1
         with:
-          commit_message: "Automated data collection"
-          push: true
+          script: |
+            git config --global user.email "action@github.com"
+            git config --global user.name "GitHub Action"
+            git add .
+            git commit -m "Automated data collection"
+            git push
