@@ -33,4 +33,3 @@ jobs:
             git config --global user.name "GitHub Action"
             git add .
             git commit -m "Automated data collection"
-            git push
