@@ -1,0 +1,7 @@
+nsepy
+numpy
+pandas
+datetime
+requests
+io
+time
