@@ -15,6 +15,9 @@ jobs:
         uses: actions/setup-python@v2
         with:
           python-version: 3.8
+      
+      - name: Upgrading pip
+        run: pip install --upgrade pip
         
       - name: Install required modules
         run: pip install -r requirements.txt
