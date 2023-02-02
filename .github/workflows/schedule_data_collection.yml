@@ -27,7 +27,7 @@ jobs:
         with:
           python-version: 3.8
       
-      - name: Upgrading pip
+      - name: Upgrade pip
         run: pip install --upgrade pip
         
       - name: Install required modules
