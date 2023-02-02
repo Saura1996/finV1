@@ -10,6 +10,9 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
+        
+      - name: Install required modules
+        run: pip install -r requirements.txt
 
       - name: Run data collection script
         run: python data_collection.py
