@@ -2,11 +2,6 @@ name: Schedule data collection
   
 on:
   workflow_dispatch
-  push:
-    branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
-  
 
 jobs:
   run-data-collection:
