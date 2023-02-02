@@ -9,7 +9,7 @@ url = 'https://archives.nseindia.com/content/equities/EQUITY_L.csv'
 s = requests.get(url).content
 
 stock_ticker_df = pd.read_csv(io.StringIO(s.decode('utf-8')))
-tickers = stock_ticker_df['SYMBOL'][1:100]
+tickers = stock_ticker_df['SYMBOL'][1:10]
 
 tickers = tickers.tolist()
 
