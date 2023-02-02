@@ -9,7 +9,7 @@ url = 'https://archives.nseindia.com/content/equities/EQUITY_L.csv'
 s = requests.get(url).content
 
 stock_ticker_df = pd.read_csv(io.StringIO(s.decode('utf-8')))
-tickers = stock_ticker_df['SYMBOL'][1:10]
+tickers = stock_ticker_df['SYMBOL'][1:1000]
 
 tickers = tickers.tolist()
 
@@ -17,7 +17,7 @@ s_data3 = pd.DataFrame()
 today = datetime.datetime.today()
 
 for t in tickers:
-    s_data = nsepy.get_history(t, start=today-datetime.timedelta(days=30), end=today)  
+    s_data = nsepy.get_history(t, start=today-datetime.timedelta(days=1096), end=today)  
     s_data = s_data.reset_index()
     s_data['Date'] = pd.to_datetime(s_data['Date'], format="%Y-%m-%d")
     
