@@ -3,7 +3,6 @@ import numpy as np
 import pandas as pd
 import datetime
 import requests
-import time
 
 url = 'https://archives.nseindia.com/content/equities/EQUITY_L.csv'
 s = requests.get(url).content
@@ -40,7 +39,8 @@ for t in tickers:
 s_data3.to_json("s_data5.json", orient="records")
 
 # Get the current timestamp
-timestampX = time.strftime("%Y-%m-%d %H:%M:%S", time.gmtime())
+now = datetime.now()
+timestampX = now
 
 # Write the timestamp to a log file
 with open("data_collection.log", "a") as logfile:
