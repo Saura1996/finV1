@@ -27,3 +27,13 @@ jobs:
 
       - name: Run data collection script
         run: python data_collection.py
+        
+      - name: Add file to git
+        run: git add s_data5.json
+      
+      - name: Git commit
+        run: git commit -m "Added json file"
+        
+      - name: Git push
+        run: git push origin main
+      
