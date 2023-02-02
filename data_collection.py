@@ -38,12 +38,3 @@ for t in tickers:
 
 
 s_data3.to_json("s_data5.json", orient="records")
-
-# Get the current timestamp
-now = datetime.now()
-timestampX = now
-
-# Write the timestamp to a log file
-with open("data_collection.log", "a") as logfile:
-    logfile.write("Data refreshed at " + timestampX + "\n")
-
