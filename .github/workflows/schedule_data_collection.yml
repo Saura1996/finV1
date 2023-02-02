@@ -25,14 +25,12 @@ jobs:
       - name: Run data collection script
         run: python data_collection.py
 
-      - name: Configure Git user
-      run: |
-        git config --global user.email "action@github.com"
-        git config --global user.name "GitHub Action"
-      
-    - name: Add changes
-      run: git add .
-      
-    - name: Commit changes
-      run: |
-        git commit -m "Automated data collection"
+      - name: Commit and push changes
+        uses: actions/github-script@v1
+        with:
+          script: |
+            git config --global user.email "action@github.com"
+            git config --global user.name "GitHub Action"
+            git add .
+            git commit -m "Automated data collection"
+            git push
