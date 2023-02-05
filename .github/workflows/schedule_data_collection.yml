@@ -1,6 +1,10 @@
 name: Schedule data collection
   
 on:
+push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
  
 
 permissions: write-all
@@ -26,10 +30,10 @@ jobs:
         run: pip install --upgrade pip
         
       - name: Install required modules
-        run: pip install -r requirements.txt
+        run: pip install -r requirement_packages_for_news_scraping.txt
 
-      - name: Run data collection script
-        run: python data_collection.py
+      - name: Run news scraping script
+        run: python news_data.py
         
       - name: Adding user identity (email)
         run: git config --global user.email "saurabhdeosarkar100@gmail.com"
