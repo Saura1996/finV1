@@ -41,8 +41,8 @@ jobs:
       - name: Adding user identity (username)
         run: git config --global user.name "Saura1996"
         
-      - name: Add file to git
-        run: git add s_data5.json
+      - name: Add json file to git
+        run: git add news.json
       
       - name: Git commit
         run: git commit -m "Added json file"
