@@ -1,4 +1,3 @@
 pandas
-re
 pygooglenews
 datetime
