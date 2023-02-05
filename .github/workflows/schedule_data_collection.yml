@@ -1,7 +1,7 @@
 name: Schedule data collection
   
 on:
-push:
+  push:
     branches: [ "main" ]
   pull_request:
     branches: [ "main" ]
